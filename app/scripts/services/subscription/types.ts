@@ -20,10 +20,10 @@ import { AccountsControllerGetStateAction } from '@metamask/accounts-controller'
 import { SmartTransactionsControllerGetStateAction } from '@metamask/smart-transactions-controller';
 import { NetworkControllerGetStateAction } from '@metamask/network-controller';
 import { KeyringControllerGetStateAction } from '@metamask/keyring-controller';
+import { RemoteFeatureFlagControllerGetStateAction } from '@metamask/remote-feature-flag-controller';
 import ExtensionPlatform from '../../platforms/extension';
 import { WebAuthenticator } from '../oauth/types';
 import { PreferencesControllerGetStateAction } from '../../controllers/preferences-controller';
-import { SwapsControllerGetStateAction } from '../../controllers/swaps/swaps.types';
 import {
   AppStateControllerGetStateAction,
   AppStateControllerSetPendingShieldCohortAction,
@@ -60,8 +60,8 @@ export type SubscriptionServiceAction =
   | PreferencesControllerGetStateAction
   | AccountsControllerGetStateAction
   | SmartTransactionsControllerGetStateAction
-  | SwapsControllerGetStateAction
   | NetworkControllerGetStateAction
+  | RemoteFeatureFlagControllerGetStateAction
   | AuthenticationControllerGetBearerToken
   | AppStateControllerGetStateAction
   | AppStateControllerSetPendingShieldCohortAction
