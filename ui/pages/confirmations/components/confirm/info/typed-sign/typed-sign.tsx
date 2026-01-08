@@ -31,7 +31,7 @@ const useTokenContract = () => {
   const { currentConfirmation } = useConfirmContext<SignatureRequestType>();
 
   if (!currentConfirmation?.msgParams) {
-    return {};
+    return { chainId: '' };
   }
 
   const {
